@@ -21,6 +21,10 @@ exports[`<GridTwoColumns /> should render two columns grid with background 1`] =
   margin-botton: 4.0rem;
 }
 
+.c7 {
+  width: 100%;
+}
+
 .c1 {
   max-width: 120rem;
   margin: 0 auto;
@@ -95,7 +99,7 @@ exports[`<GridTwoColumns /> should render two columns grid with background 1`] =
         >
           <img
             alt="Grid Two Columns"
-            class=""
+            class="c7"
             src="assets/images/javascript.svg"
           />
         </div>
@@ -126,6 +130,10 @@ exports[`<GridTwoColumns /> should render two columns grid without background 1`
   margin-botton: 4.0rem;
 }
 
+.c7 {
+  width: 100%;
+}
+
 .c1 {
   max-width: 120rem;
   margin: 0 auto;
@@ -200,7 +208,7 @@ exports[`<GridTwoColumns /> should render two columns grid without background 1`
         >
           <img
             alt="Grid Two Columns"
-            class=""
+            class="c7"
             src="assets/images/javascript.svg"
           />
         </div>
