@@ -1,7 +1,5 @@
 import P from 'prop-types';
 import { loadPages } from '../api/load-pages';
-import { mapData } from '../api/map-data';
-import config from '../config';
 import Home from '../templates/Home';
 
 export default function Index({ data = null }) {
