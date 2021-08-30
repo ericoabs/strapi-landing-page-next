@@ -5,18 +5,12 @@ import Head from 'next/head';
 import config from '../../config';
 
 import { Base } from '../Base';
-import { PageNotFound } from '../PageNotFound';
-
 import { GridText } from '../../components/GridText';
 import { GridImage } from '../../components/GridImage';
 import { GridContent } from '../../components/GridContent';
 import { GridTwoColumns } from '../../components/GridTwoColumns';
 
 function Home({ data }) {
-  if (!data || !data.length) {
-    return <PageNotFound />;
-  }
-
   const { menu, sections, footerHtml, slug, title } = data[0];
   const { links, text, link, srcImg } = menu;
 
