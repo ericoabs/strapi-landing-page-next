@@ -7,7 +7,7 @@ export default function Index({ data = null }) {
 }
 
 export const getStaticProps = async () => {
-  let data;
+  let data = null;
 
   try {
     data = await loadPages('landing-page');

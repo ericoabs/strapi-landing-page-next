@@ -16,11 +16,7 @@ export const getStaticPaths = async () => {
   });
 
   return {
-    paths: [
-      {
-        params: { slug: 'second-page' },
-      },
-    ],
+    paths: [{ params: { slug: 'second-page' } }],
     fallback: false,
   };
 };
@@ -48,5 +44,5 @@ export const getStaticProps = async (context) => {
 };
 
 Page.propTypes = {
-  data: P.object,
+  data: P.array,
 };
