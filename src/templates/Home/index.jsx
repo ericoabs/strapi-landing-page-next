@@ -9,6 +9,7 @@ import { GridText } from '../../components/GridText';
 import { GridImage } from '../../components/GridImage';
 import { GridContent } from '../../components/GridContent';
 import { GridTwoColumns } from '../../components/GridTwoColumns';
+import { ThemeConsumer } from 'styled-components';
 
 function Home({ data }) {
   const { menu, sections, footerHtml, slug, title } = data[0];
@@ -24,6 +25,8 @@ function Home({ data }) {
         <title>
           {title} | {config.siteName}
         </title>
+
+        <meta name="description" content="Landing page template" />
       </Head>
       {sections.map((section, index) => {
         const { component } = section;
