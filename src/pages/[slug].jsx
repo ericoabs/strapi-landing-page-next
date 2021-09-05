@@ -16,7 +16,7 @@ export const getStaticPaths = async () => {
   });
 
   return {
-    paths: [{ params: { slug: 'second-page' } }],
+    paths,
     fallback: false,
   };
 };
