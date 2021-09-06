@@ -1,23 +1,31 @@
 import P from 'prop-types';
 import Home from '../templates/Home';
+import { Loading } from '../templates/Loading';
 import { loadPages } from '../api/load-pages';
+import { useRouter } from 'next/router';
 
 export default function Page({ data }) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loading />;
+  }
+
   return <Home data={data} />;
 }
 
 export const getStaticPaths = async () => {
-  const paths = (await loadPages()).map((page) => {
-    return {
-      params: {
-        slug: page.slug,
-      },
-    };
-  });
+  // const paths = (await loadPages()).map((page) => {
+  //   return {
+  //     params: {
+  //       slug: page.slug,
+  //     },
+  //   };
+  // });
 
   return {
-    paths,
-    fallback: false,
+    paths: [{ params: { slug: 'second-page' } }],
+    fallback: true,
   };
 };
 
@@ -30,7 +38,7 @@ export const getStaticProps = async (context) => {
     data = null;
   }
 
-  if (!data) {
+  if (!data || !data.length) {
     return {
       notFound: true,
     };
