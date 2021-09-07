@@ -1,10 +1,10 @@
-import P from 'prop-types';
-import Home from '../templates/Home';
+import Home, { HomeProps } from '../templates/Home';
 import { Loading } from '../templates/Loading';
 import { loadPages } from '../api/load-pages';
 import { useRouter } from 'next/router';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
-export default function Page({ data }) {
+export default function Page({ data }: HomeProps) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -14,7 +14,7 @@ export default function Page({ data }) {
   return <Home data={data} />;
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   // const paths = (await loadPages()).map((page) => {
   //   return {
   //     params: {
@@ -29,11 +29,11 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps<HomeProps> = async (context) => {
   let data = null;
 
   try {
-    data = await loadPages(context.params.slug);
+    data = await loadPages(context.params.slug as string);
   } catch (error) {
     data = null;
   }
@@ -50,8 +50,4 @@ export const getStaticProps = async (context) => {
     },
     revalidate: 600,
   };
-};
-
-Page.propTypes = {
-  data: P.array,
 };
