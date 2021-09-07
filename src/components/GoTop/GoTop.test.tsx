@@ -6,7 +6,7 @@ import { GoTop } from '.';
 
 describe('<GoTop />', () => {
   it('should render a Go to Top button', () => {
-    const { container } = renderTheme(<GoTop>Children</GoTop>);
+    const { container } = renderTheme(<GoTop />);
     expect(screen.getByRole('link', { name: 'Go to top' })).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
