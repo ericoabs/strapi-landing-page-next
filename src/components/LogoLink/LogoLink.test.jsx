@@ -28,4 +28,22 @@ describe('<LogoLink />', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render internal link', () => {
+    renderTheme(
+      <LogoLink link="/target" text="Olá Mundo" srcImg="image.jpg" />,
+    );
+    const heading = screen.getByRole('heading', { name: 'Olá Mundo' });
+    expect(heading).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Olá Mundo' })).toHaveAttribute(
+      'src',
+      'image.jpg',
+    );
+  });
+
+  it('should render internal link with text only', () => {
+    renderTheme(<LogoLink link="/target" text="Olá Mundo" />);
+    const heading = screen.getByRole('heading', { name: 'Olá Mundo' });
+    expect(heading).toBeInTheDocument();
+  });
 });
