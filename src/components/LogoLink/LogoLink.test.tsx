@@ -46,4 +46,10 @@ describe('<LogoLink />', () => {
     const heading = screen.getByRole('heading', { name: 'Olá Mundo' });
     expect(heading).toBeInTheDocument();
   });
+
+  it('should render a logolink in a new tab', () => {
+    renderTheme(<LogoLink link="/target" text="Olá Mundo" newTab={true} />);
+    const heading = screen.getByRole('heading', { name: 'Olá Mundo' });
+    expect(heading).toBeInTheDocument();
+  });
 });
