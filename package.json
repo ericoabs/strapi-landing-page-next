@@ -31,6 +31,8 @@
     "@testing-library/react": "^12.0.0",
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.13.2",
     "eslint": "7.32.0",
