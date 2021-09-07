@@ -1,12 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<GridSection /> should render with background 1`] = `
-.c3 {
-  color: #0A1128;
-  font-size: 6.4rem;
-  text-transform: uppercase;
-}
-
 .c5 {
   font-size: 2.4rem;
 }
@@ -38,6 +32,12 @@ exports[`<GridSection /> should render with background 1`] = `
   transform: scale(1.1);
 }
 
+.c3 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+}
+
 .c1 {
   max-width: 120rem;
   margin: 0 auto;
@@ -60,14 +60,14 @@ exports[`<GridSection /> should render with background 1`] = `
 }
 
 @media (max-width:768px) {
-  .c3 {
-    font-size: 4.0rem;
+  .c6 {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width:768px) {
-  .c6 {
-    grid-template-columns: 1fr;
+  .c3 {
+    font-size: 4.0rem;
   }
 }
 
@@ -157,12 +157,6 @@ exports[`<GridSection /> should render with background 1`] = `
 `;
 
 exports[`<GridSection /> should render without background 1`] = `
-.c3 {
-  color: #0A1128;
-  font-size: 6.4rem;
-  text-transform: uppercase;
-}
-
 .c5 {
   font-size: 2.4rem;
 }
@@ -194,6 +188,12 @@ exports[`<GridSection /> should render without background 1`] = `
   transform: scale(1.1);
 }
 
+.c3 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+}
+
 .c1 {
   max-width: 120rem;
   margin: 0 auto;
@@ -216,14 +216,14 @@ exports[`<GridSection /> should render without background 1`] = `
 }
 
 @media (max-width:768px) {
-  .c3 {
-    font-size: 4.0rem;
+  .c6 {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width:768px) {
-  .c6 {
-    grid-template-columns: 1fr;
+  .c3 {
+    font-size: 4.0rem;
   }
 }
 

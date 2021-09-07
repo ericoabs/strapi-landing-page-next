@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextComponent /> should render with default values 1`] = `
+.c0 {
+  font-size: 2.4rem;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    Children
+  </div>
+</div>
+`;
