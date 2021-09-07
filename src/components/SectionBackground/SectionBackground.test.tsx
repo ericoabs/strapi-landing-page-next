@@ -14,7 +14,7 @@ describe('<SectionBackground />', () => {
   });
 
   it('should render without background', () => {
-    const { container } = renderTheme(
+    renderTheme(
       <SectionBackground>
         <h1>Children</h1>
       </SectionBackground>,
