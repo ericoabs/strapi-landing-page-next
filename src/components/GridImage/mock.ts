@@ -1,3 +1,5 @@
+import { GridImageProps } from '.';
+
 export default {
   background: false,
   title: 'My grid',
@@ -29,4 +31,4 @@ export default {
       srcImg: 'https://source.unsplash.com/random/360x360?r=6',
     },
   ],
-};
+} as GridImageProps;
