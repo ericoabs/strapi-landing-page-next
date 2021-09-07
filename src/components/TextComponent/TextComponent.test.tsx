@@ -9,7 +9,7 @@ describe('<TextComponent />', () => {
   });
 
   it('should render with default values', () => {
-    const { Container } = renderTheme(<TextComponent>Children</TextComponent>);
-    expect(Container).toMatchSnapshot();
+    const { container } = renderTheme(<TextComponent>Children</TextComponent>);
+    expect(container).toMatchSnapshot();
   });
 });
